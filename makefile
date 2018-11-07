@@ -1,8 +1,8 @@
 sample.pdf: analizeGaussian.py sample.dat
-	python analizeGaussian.py
+	python3 analizeGaussian.py
 
 sample.dat: sample.c
-	g++ sample.c -o sample
+	g++ sample.c -o sample -std=c++11 
 	./sample 5000 5 2
 
 clean:

@@ -1,9 +1,11 @@
+import matplotlib
+matplotlib.use("Agg")
 import numpy as np 
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 
 data = np.loadtxt('sample.dat')
-plt.hist(data,density = True)
+plt.hist(data,normed = True)
 
 mu, std = norm.fit(data)
 xmin, xmax = plt.xlim()
